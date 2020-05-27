@@ -1,0 +1,12 @@
+.container {
+  border: 1px solid red;
+  width: 25%;
+}
+
+.button {
+  display: block;
+  padding: 10px 20px;
+  background-color: teal;
+  color: aliceblue;
+  font-weight: 700;
+}
