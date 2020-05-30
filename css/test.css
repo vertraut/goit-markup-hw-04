@@ -1,12 +1,8 @@
-.container {
-  border: 1px solid red;
-  width: 25%;
+.advanages-icon-block {
+  background-color: #f3f3f3;
 }
 
-.button {
-  display: block;
-  padding: 10px 20px;
-  background-color: teal;
-  color: aliceblue;
-  font-weight: 700;
+.advanages-icon {
+  width: 70px;
+  height: 70px;
 }

@@ -192,22 +192,9 @@ img {
   letter-spacing: 0.02em;
 }
 
-.contact-item::before {
-  content: '';
-  display: block;
+.contact-icon {
   margin-right: 10px;
-  width: 15px;
-  height: 15px;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.contact-item.phone-icon::before {
-  background-image: url(../images/phone_icon.svg);
-}
-
-.contact-item.mail-icon::before {
-  background-image: url(../images/mail_icon.svg);
+  fill: currentColor;
 }
 
 .header .contact li:not(:last-child) {
@@ -225,12 +212,12 @@ img {
   max-width: 1600px;
   margin-left: auto;
   margin-right: auto;
-  background-image: linear-gradient(rgba(47, 48, 58, 0.8), rgba(47, 48, 58, 0.8)), url(../images/hero.jpg);
+  background-image: linear-gradient(rgba(47, 48, 58, 0.8), rgba(47, 48, 58, 0.8)),
+    url(../images/hero.jpg);
   background-color: #757575;
 
   background-repeat: no-repeat;
   background-position: center;
-  background-size: contain;
 }
 .hero .container {
   text-align: center;
@@ -273,37 +260,6 @@ img {
   width: 270px;
 }
 
-.advantages-item::before {
-  content: '';
-
-  display: block;
-  padding-top: 25px;
-  padding-bottom: 25px;
-  margin-bottom: 30px;
-  height: 120px;
-  border-radius: 4px;
-
-  background-color: #f5f4fa;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.advantages-item.antenna-icon::before {
-  background-image: url(../images/antenna.svg);
-}
-
-.advantages-item.clock-icon::before {
-  background-image: url(../images/clock.svg);
-}
-
-.advantages-item.diagram-icon::before {
-  background-image: url(../images/diagram.svg);
-}
-
-.advantages-item.astronaut-icon::before {
-  background-image: url(../images/astronaut.svg);
-}
-
 .advantages-item h3 {
   font-size: 14px;
   line-height: 16px;
@@ -318,6 +274,22 @@ img {
   margin-top: 0;
   margin-bottom: 0;
   /* or 171% */
+}
+
+.advanages-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f5f4fa;
+  width: 270px;
+  height: 120px;
+  margin-bottom: 30px;
+  border-radius: 4px;
+}
+
+.advanages-icon svg {
+  width: 70px;
+  height: 70px;
 }
 
 /* services */
@@ -388,7 +360,8 @@ img {
 .team-item {
   width: 270px;
   background: #ffffff;
-  box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12);
+  box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 1px 3px rgba(0, 0, 0, 0.12);
 
   padding-bottom: 24px;
 }
@@ -421,59 +394,55 @@ img {
 .team-social-list {
   display: flex;
   justify-content: center;
-  /* margin-bottom: 24px; */
 }
 
-.team-social-list a {
-  display: block;
+.team-item a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 44px;
   height: 44px;
-  color: #afb1b8;
-  text-decoration: none;
-  background-repeat: no-repeat;
-  background-position: center;
   border-radius: 50%;
+  color: #afb1b8;
+  /* padding: 12px; */
 }
 
-.team-social-list .inst-logo {
-  background-image: url(../images/instagram_icon.svg);
-}
-.team-social-list .twitter-logo {
-  background-image: url(../images/twitter_icon.svg);
-}
-.team-social-list .facebook-logo {
-  background-image: url(../images/facebook_icon.svg);
-}
-.team-social-list .linkedin-logo {
-  background-image: url(../images/linkedin_icon.svg);
+.team-item .social-icon {
+  text-decoration: none;
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
 }
 
-.team-social-list li {
-  margin-right: 11px;
+.team-social-list li:not(:last-child) {
+  margin-right: 10px;
 }
 
-.team-social-list a:hover,
-.team-social-list a:focus {
+.team-item a:hover,
+.team-item a:focus {
   color: var(--light-color);
   background-color: var(--accent-color);
 }
 
-.team-social-list li {
-}
-
 /* Клиенты */
 
-.clients {
-  /* background-color: springgreen; */
-}
-
-.clients_item {
+.clients_item a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 170px;
-  text-align: center;
+  height: 90px;
   border: 1px solid #afb1b8;
   border-radius: 4px;
-  padding-top: 25px;
-  padding-bottom: 25px;
+  color: #afb1b8;
+}
+
+.clients_item a:hover {
+  color: var(--accent-color);
+}
+
+.client-icon {
+  fill: currentColor;
 }
 
 .clients ul {
@@ -550,14 +519,23 @@ img {
   display: flex;
 }
 
+.footer .social-icon {
+  text-decoration: none;
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+}
+
 .footer-social-list li:not(:last-child) {
   margin-right: 10px;
 }
 
 .footer-social-list a {
-  display: block;
-  padding: 11px;
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
   color: var(--light-color);
   background-color: rgba(255, 255, 255, 0.1);
@@ -572,11 +550,18 @@ img {
 }
 
 /* Форма подписки */
-.subscribe {
+.button.subscribe {
+  display: flex;
+  justify-content: center;
 }
 
-.button.subscribe {
-  display: block;
+.button.subscribe::after {
+  content: '';
+  background-image: url(../images/icon-send.svg);
+  width: 24px;
+  height: 24px;
+  background-repeat: no-repeat;
+  margin-left: 10px;
 }
 
 .footer-social b,
@@ -645,7 +630,8 @@ section.portfolio {
 .filter-item button:focus {
   color: var(--light-color);
   background-color: var(--accent-color);
-  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.12), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 3px 1px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.12), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 3px 1px rgba(0, 0, 0, 0.1);
 }
 
 /* Сетка примеров работ */
@@ -673,7 +659,8 @@ section.portfolio {
 }
 
 .examples li:hover {
-  box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06), 0px 1px 1px rgba(0, 0, 0, 0.12);
+  box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    0px 1px 1px rgba(0, 0, 0, 0.12);
 }
 
 /* формирование карточки */
