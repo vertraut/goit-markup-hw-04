@@ -427,14 +427,14 @@ img {
 /* Клиенты */
 
 .clients_item a {
+  color: #afb1b8;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 170px;
   height: 90px;
-  border: 1px solid #afb1b8;
+  border: 1px solid currentColor;
   border-radius: 4px;
-  color: #afb1b8;
 }
 
 .clients_item a:hover {
